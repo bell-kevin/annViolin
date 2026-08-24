@@ -3,20 +3,31 @@
 Presentation materials for **"The Origin of the Modern Violin"** — a 15-minute talk given by
 Ann Peterson at the Sempre Music Club, Ogden, Utah, 2026.
 
+## Live
+
+The slideshow is published with GitHub Pages and opens straight into the deck:
+
+- **Slideshow — <https://bell-kevin.github.io/annViolin/>**
+- **Speaking script — <https://bell-kevin.github.io/annViolin/violin-script.html>**
+
 ## Contents
 
 | File | What it is |
 | --- | --- |
-| [`violin-slides.html`](violin-slides.html) | The slideshow — 20 slides, self-contained, opens in any browser |
+| [`index.html`](index.html) | The slideshow — 20 slides, self-contained; served as the site root |
 | [`violin-script.html`](violin-script.html) | The speaking script as a web page, with a live pace timer |
 | [`violin-script.md`](violin-script.md) | The same script in Markdown, for printing or editing |
 
 All three are standalone. Nothing to build, nothing to install — double-click an HTML file and it
-runs. The only network request is to Google Fonts; the pages fall back to Georgia if offline.
+runs, online or off. The only network request is to Google Fonts; the pages fall back to Georgia
+if that fails.
+
+`.nojekyll` disables Jekyll processing so Pages serves the files exactly as committed.
 
 ## Running the slideshow
 
-Open `violin-slides.html` in a browser and press <kbd>F</kbd> for fullscreen.
+Open the [live site](https://bell-kevin.github.io/annViolin/) (or `index.html` locally) and press
+<kbd>F</kbd> for fullscreen.
 
 | Key | Action |
 | --- | --- |
