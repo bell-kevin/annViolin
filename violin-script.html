@@ -1,0 +1,717 @@
+<title>Ann's Reading Copy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&display=swap">
+
+<style>
+/* ============================================================
+   ANN'S READING COPY — speaking script
+   The Origin of the Modern Violin · Sempre Music Club, 2026
+
+   Paired with the slide deck: same varnish amber, same ebony,
+   inverted for reading. Full light / dark / system support.
+   ============================================================ */
+
+:root{
+  --paper:   #F6F3ED;
+  --paper-2: #EDE8DF;
+  --rule:    #DCD3C5;
+  --ink:     #171310;
+  --ink-2:   #4A4038;
+  --dim:     #6F6356;
+  --accent:  #A65A18;
+  --accent-soft: #F1E3CF;
+  --green:   #3B6557;
+  --shadow:  0 1px 3px rgba(23,19,16,.10), 0 8px 24px rgba(23,19,16,.07);
+
+  --display: "Fraunces", Georgia, "Times New Roman", serif;
+  --body:    "EB Garamond", Georgia, "Times New Roman", serif;
+  --util:    "Archivo", "Helvetica Neue", Arial, sans-serif;
+
+  --size: 1;           /* reader-adjustable type scale */
+  --measure: 33em;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:   #14100D;
+    --paper-2: #1D1712;
+    --rule:    #34291E;
+    --ink:     #F4EADA;
+    --ink-2:   #C9B79E;
+    --dim:     #9C8A73;
+    --accent:  #E0993C;
+    --accent-soft: #2C1E11;
+    --green:   #7FA89B;
+    --shadow:  0 1px 3px rgba(0,0,0,.5), 0 8px 24px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:   #14100D;
+  --paper-2: #1D1712;
+  --rule:    #34291E;
+  --ink:     #F4EADA;
+  --ink-2:   #C9B79E;
+  --dim:     #9C8A73;
+  --accent:  #E0993C;
+  --accent-soft: #2C1E11;
+  --green:   #7FA89B;
+  --shadow:  0 1px 3px rgba(0,0,0,.5), 0 8px 24px rgba(0,0,0,.35);
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: calc(20px * var(--size));
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap{
+  max-width: 62rem;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 8rem;
+}
+
+/* ---------------- masthead ---------------- */
+
+.masthead{
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 1.6rem;
+  margin-bottom: 2.2rem;
+}
+.kicker{
+  font-family: var(--util);
+  font-size: .74rem;
+  font-weight: 600;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 .9rem;
+}
+.masthead h1{
+  font-family: var(--display);
+  font-size: clamp(2.1rem, 5.2vw, 3.1rem);
+  font-weight: 600;
+  font-variation-settings: "opsz" 100;
+  line-height: 1.04;
+  letter-spacing: -.018em;
+  margin: 0 0 .7rem;
+  text-wrap: balance;
+}
+.masthead .sub{
+  font-family: var(--util);
+  font-size: .88rem;
+  color: var(--dim);
+  letter-spacing: .03em;
+  margin: 0;
+}
+
+/* ---------------- how-to panel ---------------- */
+
+.howto{
+  background: var(--paper-2);
+  border-left: 3px solid var(--accent);
+  padding: 1.3rem 1.5rem;
+  margin-bottom: 3rem;
+  font-size: .88em;
+  line-height: 1.55;
+}
+.howto h2{
+  font-family: var(--util);
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 .8rem;
+}
+.howto ul{ margin: 0; padding-left: 1.1em; display: flex; flex-direction: column; gap: .45rem; }
+.howto li{ color: var(--ink-2); }
+
+/* ---------------- the script itself ---------------- */
+
+.cue{
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 0 2rem;
+  padding: 1.6rem 0 1.7rem;
+  border-top: 1px solid var(--rule);
+  align-items: start;
+  scroll-margin-top: 5rem;
+}
+.cue:first-of-type{ border-top: 0; }
+
+.cue.due{
+  background: var(--accent-soft);
+  box-shadow: -1.25rem 0 0 var(--accent-soft), 1.25rem 0 0 var(--accent-soft);
+}
+
+/* the timing rail */
+.rail{
+  position: sticky;
+  top: 1.5rem;
+  font-family: var(--util);
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  padding-top: .35rem;
+}
+.rail .t{
+  font-size: 1.28rem;
+  font-weight: 600;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.01em;
+  line-height: 1;
+}
+.rail .sl{
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+.rail .nm{
+  font-family: var(--body);
+  font-size: .82rem;
+  font-style: italic;
+  color: var(--dim);
+  line-height: 1.25;
+}
+.rail .cut{
+  margin-top: .35rem;
+  font-size: .6rem;
+  font-weight: 600;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  color: var(--green);
+  border: 1px solid var(--green);
+  border-radius: 2px;
+  padding: .15em .45em;
+  align-self: flex-start;
+}
+
+.said{ display: flex; flex-direction: column; gap: .85rem; max-width: var(--measure); }
+.said p{ margin: 0; }
+.said strong{ font-weight: 600; color: var(--ink); }
+.said em{ font-style: italic; }
+.said .hit{ color: var(--accent); font-weight: 600; }
+.said .stage-dir{
+  font-family: var(--util);
+  font-size: .76em;
+  font-style: normal;
+  color: var(--green);
+  letter-spacing: .02em;
+}
+.said .stage-dir::before{ content: "▸ "; }
+
+.cue.is-cut .said{ opacity: .82; }
+
+/* ---------------- appendix ---------------- */
+
+.appendix{
+  margin-top: 4rem;
+  padding-top: 2.5rem;
+  border-top: 2px solid var(--accent);
+}
+.appendix h2{
+  font-family: var(--display);
+  font-size: 1.65rem;
+  font-weight: 600;
+  font-variation-settings: "opsz" 60;
+  margin: 0 0 1.4rem;
+  letter-spacing: -.012em;
+}
+.appendix h2 + p{ margin-top: -.8rem; }
+.qa{ display: flex; flex-direction: column; gap: 1.6rem; max-width: 46em; }
+.qa dt{
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 1.02em;
+  color: var(--ink);
+  margin-bottom: .35rem;
+}
+.qa dd{ margin: 0; color: var(--ink-2); font-size: .95em; }
+.sources{
+  margin: 1.2rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  max-width: 46em;
+  font-size: .93em;
+  color: var(--ink-2);
+}
+.sources li{ padding-left: 1.1em; text-indent: -1.1em; }
+.sources li::before{ content: "— "; color: var(--accent); }
+
+/* ---------------- presenter bar ---------------- */
+
+.bar{
+  position: fixed;
+  left: 50%;
+  bottom: 1.1rem;
+  transform: translateX(-50%);
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  padding: .5rem .6rem;
+  background: var(--paper-2);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+  font-family: var(--util);
+  max-width: calc(100vw - 2rem);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.clock{
+  font-size: 1.18rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.01em;
+  color: var(--ink);
+  padding: 0 .5rem 0 .7rem;
+  min-width: 5.4rem;
+  text-align: center;
+}
+.clock.over{ color: var(--accent); }
+.pace{
+  font-size: .72rem;
+  letter-spacing: .05em;
+  color: var(--dim);
+  padding-right: .6rem;
+  border-right: 1px solid var(--rule);
+  min-width: 7.2rem;
+  line-height: 1.25;
+}
+.pace b{ color: var(--accent); font-weight: 600; }
+.bar button{
+  font-family: var(--util);
+  font-size: .74rem;
+  font-weight: 600;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  background: transparent;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: .42rem .78rem;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease, border-color .15s ease;
+}
+.bar button:hover,
+.bar button:focus-visible{
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.bar button.primary{
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--paper);
+}
+.bar button.primary:hover,
+.bar button.primary:focus-visible{
+  background: var(--accent);
+  color: var(--paper);
+  filter: brightness(1.08);
+}
+.bar .grp{ display: flex; gap: .3rem; }
+
+:focus-visible{ outline: 2px solid var(--accent); outline-offset: 2px; }
+
+@media (max-width: 720px){
+  .cue{ grid-template-columns: 1fr; gap: .7rem; }
+  .rail{ position: static; flex-direction: row; align-items: baseline; gap: .7rem; flex-wrap: wrap; }
+  .cue.due{ box-shadow: -.75rem 0 0 var(--accent-soft), .75rem 0 0 var(--accent-soft); }
+  .wrap{ padding-bottom: 11rem; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{ transition: none !important; }
+}
+
+/* ---------------- print: a clean reading copy ---------------- */
+
+@media print{
+  :root{
+    --paper: #fff; --paper-2: #fff; --rule: #bbb;
+    --ink: #000; --ink-2: #222; --dim: #555; --accent: #8A4A12;
+    --accent-soft: #fff;
+  }
+  body{ font-size: 12.5pt; line-height: 1.5; }
+  .wrap{ max-width: none; padding: 0; }
+  .bar, .howto .no-print{ display: none !important; }
+  .cue{ break-inside: avoid; page-break-inside: avoid; grid-template-columns: 6rem 1fr; }
+  .cue.due{ background: none; box-shadow: none; }
+  .rail{ position: static; }
+  .appendix{ break-before: page; page-break-before: always; }
+  a{ color: inherit; text-decoration: none; }
+}
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="kicker">Speaking script · read aloud · 15 minutes</p>
+    <h1>The Origin of the Modern Violin</h1>
+    <p class="sub">Ann Peterson &nbsp;·&nbsp; Sempre Music Club, Ogden, Utah &nbsp;·&nbsp; 2026</p>
+  </header>
+
+  <section class="howto">
+    <h2>How to use this</h2>
+    <ul>
+      <li>Times in the left rail are <strong>cumulative</strong> — where you should be when you <em>start</em> that slide.</li>
+      <li>Slide numbers match the deck exactly. Advance with <strong>→</strong> or the spacebar.</li>
+      <li>Two passages are marked <strong>cut if long</strong>. Dropping both saves about 70 seconds.</li>
+      <li><span class="hit">Amber</span> words are the ones worth landing on. An em dash — marks a real pause.</li>
+      <li><strong>Pace check:</strong> if you start Slide 12 at about 9:00, you are exactly on time.</li>
+      <li class="no-print">Start the timer at the bottom of the screen and it will highlight the section you should be reading. Press <strong>S</strong> to start or pause it.</li>
+    </ul>
+  </section>
+
+  <main id="script">
+
+    <article class="cue" data-t="0" data-slide="1">
+      <div class="rail"><span class="t">0:00</span><span class="sl">Slide 1</span><span class="nm">Title</span></div>
+      <div class="said">
+        <p>Good afternoon, and thank you for having me.</p>
+        <p>I want to start with a puzzle.</p>
+      </div>
+    </article>
+
+    <article class="cue" data-t="15" data-slide="2">
+      <div class="rail"><span class="t">0:15</span><span class="sl">Slide 2</span><span class="nm">A puzzle</span></div>
+      <div class="said">
+        <p>Almost every instrument we play has a long, visible childhood. You can watch the piano grow up — clavichord, harpsichord, fortepiano, concert grand. Each step is documented. Each step is a little better than the one before. The flute, the clarinet, the horn — same story. Awkward ancestors, gradual improvement.</p>
+        <p>The violin does not do that.</p>
+        <p>The violin appears in northern Italy in the 1530s, and it appears essentially <span class="hit">finished</span>. Within about thirty years of the first pictures of it, one workshop in Cremona is building instruments we would recognise instantly, that we would happily play tonight, and that have never really been improved on. Four strings tuned in fifths. An arched top and back carved from solid wood. Two f-holes. A scroll.</p>
+        <p>That shape has not meaningfully changed in five hundred years.</p>
+        <p>So — where did it come from? And why did it arrive so complete?</p>
+      </div>
+    </article>
+
+    <article class="cue" data-t="70" data-slide="3">
+      <div class="rail"><span class="t">1:10</span><span class="sl">Slide 3</span><span class="nm">The bow came first</span></div>
+      <div class="said">
+        <p>Let&#8217;s start further back than you might expect, because the real invention here is not the box. It&#8217;s the <span class="hit">bow</span>.</p>
+        <p>Plucked strings are ancient and universal. But drawing a ribbon of horsehair across a string to make a sound that never has to stop — that is a specific idea, and it seems to have come from the horse cultures of Central Asia, somewhere around the ninth or tenth century. It travelled west by two roads: through the Byzantine empire, and through Islamic Spain. By about the year 1000, Europe has bowed instruments.</p>
+        <p>Everything that follows is Europe spending five hundred years working out what to put underneath that bow.</p>
+      </div>
+    </article>
+
+    <article class="cue" data-t="115" data-slide="4">
+      <div class="rail"><span class="t">1:55</span><span class="sl">Slide 4</span><span class="nm">Three ancestors</span></div>
+      <div class="said">
+        <p>By the end of the Middle Ages, three instruments matter to our story.</p>
+        <p>The <strong>rebec</strong>. Small, narrow, pear-shaped, carved from a single block of wood. Usually three strings — and this is the important part — <span class="hit">tuned in fifths</span>. It descends from the Arabic rabāb. It was loud, it was nasal, and it was a dance instrument.</p>
+        <p>The <strong>medieval fiddle</strong>, or vielle. Bigger. Flatter. Waisted, with a real soundbox, often five strings, and a drone string running off the side of the fingerboard. This is the instrument of the court and of the storyteller.</p>
+        <p>And the <strong>lira da braccio</strong> — the Renaissance Italian instrument, and the one that gets closest. Seven strings: five over the fingerboard, two drones off the edge. A waisted body. A bridge. Sound holes. And crucially, it was played <em>da braccio</em> — <span class="hit">on the arm</span>. Painters put it in the hands of Apollo and of Orpheus. It belonged to the improvising poet-musician.</p>
+        <p>Look at a lira da braccio and you are essentially looking at a viola.</p>
+        <p>So the violin inherits its <strong>tuning</strong> from the rebec, its <strong>body</strong> from the fiddle, and its <strong>playing position</strong> from the lira da braccio. It is not a descendant of any one of them. It is a synthesis.</p>
+      </div>
+    </article>
+
+    <article class="cue" data-t="195" data-slide="5">
+      <div class="rail"><span class="t">3:15</span><span class="sl">Slide 5</span><span class="nm">Not the viol</span></div>
+      <div class="said">
+        <p>Now let me clear away the most common misunderstanding, which is that the violin came from the viol — the viola da gamba.</p>
+        <p>It didn&#8217;t. They are <span class="hit">cousins, not parent and child</span>. They were developed at the same time, in the same places, often by the same hands, for completely different purposes.</p>
+        <p>The viol has six strings, tuned in fourths with a third in the middle, like a lute. It has <strong>frets</strong> — actual gut frets tied around the neck. Sloped shoulders. A flat back. C-shaped sound holes. You hold it on or between the legs — <em>da gamba</em>, on the leg — and you hold the bow <strong>underhand</strong>.</p>
+        <p>The violin has four strings tuned in fifths. <strong>No frets.</strong> Square shoulders with pointed corners. A back carved and arched from solid wood. F-holes. You hold it on the arm, and the bow overhand.</p>
+        <p>Those are two different design philosophies, and you can hear the difference. The viol is built for <strong>polyphony</strong> — for chords, for playing one line among six in a quiet room. The violin is built to be a <span class="hit">single loud singing voice</span>, heard across a hall, or across a piazza, over the noise of dancing feet.</p>
+      </div>
+    </article>
+
+    <article class="cue" data-t="270" data-slide="6">
+      <div class="rail"><span class="t">4:30</span><span class="sl">Slide 6</span><span class="nm">Three kinds of evidence</span></div>
+      <div class="said">
+        <p>Which brings us to the actual moment of invention: northern Italy, the Po valley, the second quarter of the sixteenth century.</p>
+        <p>There is no birth certificate. What we have is three different kinds of evidence, and they converge on the same twenty years.</p>
+        <p>First, the <strong>word</strong>. Variants of <em>violino</em> start turning up in account books and court records in the 1520s and 1530s — payments to players of an instrument that had not needed a name before.</p>
+      </div>
+    </article>
+
+    <article class="cue" data-t="315" data-slide="7">
+      <div class="rail"><span class="t">5:15</span><span class="sl">Slide 7</span><span class="nm">The first pictures</span></div>
+      <div class="said">
+        <p>Second, the <strong>pictures</strong> — and these are wonderful.</p>
+        <p>There is a painter named <strong>Gaudenzio Ferrari</strong>, working in Piedmont and Lombardy. Around 1529 he paints a Madonna in Vercelli, and one of the angels is holding what is unmistakably a violin. Three strings rather than four — but the body, the f-holes, the scroll, the whole gesture of it, all there.</p>
+        <p>Then in <strong>1535</strong> he paints the dome of the sanctuary at Saronno: a ceiling crowded with musical angels. And among them is not one violin but the <span class="hit">whole family</span> — violin, viola, and a big bass.</p>
+        <p>That is the detail that should stop us. Six years after the first glimpse of the idea, a painter is depicting it as a complete, settled, four-part consort. This thing developed fast.</p>
+      </div>
+    </article>
+
+    <article class="cue" data-t="365" data-slide="8">
+      <div class="rail"><span class="t">6:05</span><span class="sl">Slide 8</span><span class="nm">&ldquo;Used for dancing&rdquo;</span></div>
+      <div class="said">
+        <p>Third, the <strong>description</strong>. In <strong>1556</strong>, a Frenchman named Philibert Jambe de Fer publishes a small music primer in Lyon, and he lays out the violin family properly — including the tuning: <span class="hit">G, D, A, E</span>. Exactly what is on your instrument tonight.</p>
+        <p>But he also tells us something about status, and this is my favourite sentence in the whole story. He says, in effect: the viol is the instrument that gentlemen and merchants play to pass their time. The violin is <span class="hit">used for dancing</span>, and it is played by those who make a living from it.</p>
+        <p>The violin was not born noble. It was born a <strong>working instrument</strong> — a professional&#8217;s tool for weddings, dances, processions, and the theatre. It took the better part of a century to be let into the drawing room.</p>
+      </div>
+    </article>
+
+    <article class="cue" data-t="420" data-slide="9">
+      <div class="rail"><span class="t">7:00</span><span class="sl">Slide 9</span><span class="nm">Andrea Amati</span></div>
+      <div class="said">
+        <p>So who actually built it?</p>
+        <p>The form is fixed — standardised, made repeatable — in Cremona, in the workshop of <strong>Andrea Amati</strong>, born around 1505, died 1577. He is as close to &#8220;the inventor of the violin&#8221; as any one person gets, and even that is not quite right.</p>
+        <p>He did not invent it out of nothing. What he did was <span class="hit">resolve</span> it. He settled the proportions. The arching. The shape of the f-hole. The corner blocks, the linings, the whole internal architecture that lets a thin wooden box survive fifty pounds of string tension for four hundred years.</p>
+        <p>And then — this is the part that mattered — he taught it to his sons, so that it could be <strong>repeated</strong>.</p>
+      </div>
+    </article>
+
+    <article class="cue" data-t="470" data-slide="10">
+      <div class="rail"><span class="t">7:50</span><span class="sl">Slide 10</span><span class="nm">A commission from a king</span></div>
+      <div class="said">
+        <p>The oldest violins that still exist anywhere in the world are his.</p>
+        <p>In the 1560s, Amati supplies a large set of instruments — the traditional figure is <span class="hit">thirty-eight</span> — to the court of <strong>Charles IX of France</strong>, decorated with the royal arms and mottoes in gold. A handful survive. There is one in Oxford, and several in South Dakota.</p>
+        <p>Consider what that commission means. In 1564, the King of France orders his entire court string band from a workshop in Cremona. <strong>One generation</strong> after those angels at Saronno, this brand-new instrument is already the establishment choice — and Cremona is already the address.</p>
+      </div>
+    </article>
+
+    <article class="cue is-cut" data-t="520" data-slide="11">
+      <div class="rail"><span class="t">8:40</span><span class="sl">Slide 11</span><span class="nm">Brescia</span><span class="cut">Cut if long</span></div>
+      <div class="said">
+        <p>Cremona was not alone. Forty miles away, <strong>Brescia</strong> had a rival school — Zanetto and Peregrino Micheli, then <strong>Gasparo da Salò</strong>, then Giovanni Paolo Maggini.</p>
+        <p>Brescian instruments are bolder, less refined, sometimes frankly strange — and wonderful. Their double basses are prized to this day. But the Brescian line dies out in the seventeenth century. The Cremonese line does not, and the reason is instructive.</p>
+      </div>
+    </article>
+
+    <article class="cue" data-t="555" data-slide="12">
+      <div class="rail"><span class="t">9:15</span><span class="sl">Slide 12</span><span class="nm">Why Cremona?</span></div>
+      <div class="said">
+        <p>Why Cremona? Several answers, none of them magic.</p>
+        <p><strong>Wood.</strong> Spruce for the tops came down from the Val di Fiemme in the Dolomites — slow-grown alpine spruce, still cut for instruments today. Maple for the backs came up the trade routes from the Balkans.</p>
+        <p><strong>Position.</strong> Cremona sits on the Po. Materials in, instruments out.</p>
+        <p><strong>Money.</strong> Northern Italian courts and churches with the means to commission.</p>
+        <p>And the one people forget: <span class="hit">workshop culture</span>. Cremona had no restrictive guild governing violin making. The skill passed by apprenticeship, in the house, hand to hand, for two hundred years.</p>
+      </div>
+    </article>
+
+    <article class="cue" data-t="610" data-slide="13">
+      <div class="rail"><span class="t">10:10</span><span class="sl">Slide 13</span><span class="nm">The chain</span></div>
+      <div class="said">
+        <p>And that is the real story of Cremona. Not one genius. An <span class="hit">unbroken chain</span>.</p>
+        <p>Andrea Amati passes it to his sons Antonio and Girolamo. Girolamo&#8217;s son is <strong>Nicolò Amati</strong>, born 1596 — the finest maker of the family.</p>
+        <p>And then something terrible turns out to be decisive.</p>
+        <p>In <strong>1630</strong>, plague comes through Cremona. It kills a huge share of the city, including most of the working luthiers — and including Nicolò&#8217;s own father, mother, and sisters. Nicolò survives. And for the first time, the family has to take apprentices from <strong>outside</strong> the family, because there is no one left inside it.</p>
+        <p>One of those apprentices is <strong>Andrea Guarneri</strong>. And somewhere in Nicolò&#8217;s orbit — the exact relationship is still argued over by scholars — is a young man named <strong>Antonio Stradivari</strong>.</p>
+        <p>The plague is what opened the door.</p>
+      </div>
+    </article>
+
+    <article class="cue" data-t="670" data-slide="14">
+      <div class="rail"><span class="t">11:10</span><span class="sl">Slide 14</span><span class="nm">Stradivari and del Gesù</span></div>
+      <div class="said">
+        <p>Stradivari lives to about ninety-three and works nearly to the end. He makes perhaps <strong>eleven hundred</strong> instruments; around <strong>six hundred and fifty</strong> survive.</p>
+        <p>Between roughly <span class="hit">1700 and 1720</span> — what dealers call his golden period — he settles on a slightly longer, flatter, broader pattern under a deep red-orange varnish, and produces the instruments against which every violin since has been measured.</p>
+        <p>Then, a generation later, <strong>Giuseppe Guarneri, called &#8220;del Gesù.&#8221;</strong> Faster, rougher, more daring, more irregular. Paganini&#8217;s instrument. And the one a great many soloists reach for when they want sheer power.</p>
+      </div>
+    </article>
+
+    <article class="cue" data-t="720" data-slide="15">
+      <div class="rail"><span class="t">12:00</span><span class="sl">Slide 15</span><span class="nm">So what was the secret?</span></div>
+      <div class="said">
+        <p>Now — the question I would be asked in a moment if I did not get to it first. <strong>What was the secret?</strong></p>
+        <p>A great many have been proposed. The varnish. Some chemical treatment of the wood. The theory that the Little Ice Age produced unusually dense, slow-grown spruce in exactly those decades. Each of these has some evidence behind it. <strong>None of them is settled.</strong></p>
+        <p>But here is the honest finding. Since 2010, researchers have run properly <strong>blind</strong> tests — soloists in a darkened room wearing welder&#8217;s goggles, playing old Cremonese instruments against fine modern ones. The players could not reliably tell which was which. And asked to pick a favourite, they often picked the <span class="hit">new</span> one.</p>
+        <p>I don&#8217;t offer that to diminish Stradivari. I offer it because I think the real secret is less romantic and rather more impressive: <span class="hit">two hundred years of concentrated craft in one small city</span>, refining a single design, passed hand to hand without a break.</p>
+      </div>
+    </article>
+
+    <article class="cue" data-t="780" data-slide="16">
+      <div class="rail"><span class="t">13:00</span><span class="sl">Slide 16</span><span class="nm">The twist</span></div>
+      <div class="said">
+        <p>And now I owe you the word in my title, because I said the <em><strong>modern</strong></em> violin.</p>
+        <p>Here is the twist. <span class="hit">Almost no Stradivari played today is in the condition Stradivari left it.</span></p>
+        <p>Between roughly <strong>1780 and 1830</strong>, essentially every surviving old Italian violin was <strong>rebuilt</strong>. Concert halls got bigger. Orchestras got bigger. Pitch went up. So makers — largely in Paris and Mirecourt — took these instruments apart and modernised them.</p>
+        <p>A <strong>longer neck</strong>, tilted back at an angle, and <strong>mortised into the body</strong> instead of nailed to it. A <strong>longer ebony fingerboard</strong>, to reach the high positions the new music demanded. A <strong>higher bridge</strong>. And inside, a <strong>longer, heavier bass bar</strong> to carry the extra tension.</p>
+        <p>More tension. More projection. More brilliance.</p>
+      </div>
+    </article>
+
+    <article class="cue" data-t="835" data-slide="17">
+      <div class="rail"><span class="t">13:55</span><span class="sl">Slide 17</span><span class="nm">And the bow</span></div>
+      <div class="said">
+        <p>The bow was rebuilt too.</p>
+        <p>Around <strong>1785</strong>, <strong>François Tourte</strong> in Paris — working alongside the violinist Viotti — arrives at the modern bow. Pernambuco wood. Longer, heavier, and curved <span class="hit">inward</span> instead of outward, with a frog that spreads the hair into a flat ribbon.</p>
+        <p>The baroque bow is superb at articulating, at dancing, at speaking each note. The Tourte bow can <span class="hit">sing one long line</span>. Romantic violin playing is simply not possible without it.</p>
+        <p>Louis Spohr adds the chin rest around 1820. The shoulder rest is a twentieth-century afterthought.</p>
+      </div>
+    </article>
+
+    <article class="cue is-cut" data-t="875" data-slide="18">
+      <div class="rail"><span class="t">14:35</span><span class="sl">Slide 18</span><span class="nm">Five hundred years</span><span class="cut">Cut if long</span></div>
+      <div class="said">
+        <p>So — the whole arc on a single line.</p>
+        <p class="stage-dir">Pause a beat. Let them read it. Then advance.</p>
+      </div>
+    </article>
+
+    <article class="cue" data-t="895" data-slide="19">
+      <div class="rail"><span class="t">14:55</span><span class="sl">Slide 19</span><span class="nm">Closing</span></div>
+      <div class="said">
+        <p>Here is where we land.</p>
+        <p>The violin was <strong>assembled</strong> around 1530 in northern Italy, out of a rebec&#8217;s tuning, a fiddle&#8217;s body, and a lira da braccio&#8217;s playing position. It was <strong>perfected</strong> in Cremona within a single generation. And then, two hundred and fifty years later, it was quietly <strong>rebuilt</strong> to be louder.</p>
+        <p>The instrument in the case is a Renaissance object wearing a Romantic conversion.</p>
+        <p>And it is still, five centuries on, the best answer anyone has found to the question: <em>what should a singing voice made of wood look like?</em></p>
+        <p>Thank you.</p>
+        <p class="stage-dir">Advance to Slide 20 and leave it up through the questions.</p>
+      </div>
+    </article>
+
+  </main>
+
+  <section class="appendix">
+    <h2>If someone asks…</h2>
+    <dl class="qa">
+      <div>
+        <dt>&#8220;Is my grandmother&#8217;s violin with the Stradivarius label real?&#8221;</dt>
+        <dd>Almost certainly not — and it is usually not a fake in the dishonest sense. From the 1880s onward, German and French factories turned out hundreds of thousands of student violins with &#8220;Antonius Stradivarius Cremonensis&#8221; printed inside as a statement of <em>model</em>, not of origin — rather the way a car might be sold as a &#8220;roadster.&#8221; It is still worth having a good shop look at it, but the label by itself means nothing.</dd>
+      </div>
+      <div>
+        <dt>&#8220;How many real Stradivari are there?&#8221;</dt>
+        <dd>Around 650 surviving instruments out of roughly 1,100 made — about 500 of them violins, plus violas, cellos, and a few guitars and harps.</dd>
+      </div>
+      <div>
+        <dt>&#8220;Why f-holes?&#8221;</dt>
+        <dd>Two reasons. Acoustically, a long thin slot moves far more air at the frequencies that matter than a round hole of the same area. Structurally, the shape leaves a bar of wood on either side to carry the bridge load. The medieval C-hole evolved into it gradually.</dd>
+      </div>
+      <div>
+        <dt>&#8220;Did women play the violin then?&#8221;</dt>
+        <dd>Not publicly, and not for a long time — it was a professional&#8217;s instrument, and the professions were closed to them. The great exception is Venice: the <em>ospedali</em>, the charitable foundling hospitals, trained orphaned girls into celebrated orchestras. Vivaldi wrote much of his violin music for the young women of the Pietà.</dd>
+      </div>
+      <div>
+        <dt>&#8220;What did it sound like then?&#8221;</dt>
+        <dd>Lower and softer. Baroque pitch varied by city but often sat near A=415, roughly a semitone below ours. Plain gut strings, a lighter bass bar, and a shorter bow — sweeter and more speech-like, with far less carrying power.</dd>
+      </div>
+    </dl>
+
+    <h2 style="margin-top:2.8rem">Sources and further reading</h2>
+    <ul class="sources">
+      <li>David Schoenbaum, <em>The Violin: A Social History of the World&#8217;s Most Versatile Instrument</em> (2013) — the best single-volume general history.</li>
+      <li>Peter Walls, &#8220;Violin,&#8221; <em>Grove Music Online</em> — the standard scholarly summary of the origins question.</li>
+      <li>Philibert Jambe de Fer, <em>Epitome musical</em> (Lyon, 1556) — the first description of the violin family and its tuning.</li>
+      <li>Claudia Fritz et al., &#8220;Player preferences among new and old violins,&#8221; <em>PNAS</em> (2012), and the Paris follow-up study (2014) — the blind playing tests.</li>
+      <li>The Ashmolean Museum, Oxford — holds &#8220;Le Messie&#8221; (Stradivari, 1716) and an Andrea Amati from the Charles IX set.</li>
+      <li>National Music Museum, Vermillion, South Dakota — the largest American collection of early Cremonese instruments, including Amatis from the French court set.</li>
+    </ul>
+  </section>
+</div>
+
+<div class="bar" role="group" aria-label="Presenter controls">
+  <span class="clock" id="clock" aria-live="off">0:00</span>
+  <span class="pace" id="pace">Timer stopped</span>
+  <button type="button" class="primary" id="toggle">Start</button>
+  <button type="button" id="reset">Reset</button>
+  <span class="grp">
+    <button type="button" id="smaller" aria-label="Smaller text">A&minus;</button>
+    <button type="button" id="bigger" aria-label="Larger text">A+</button>
+  </span>
+</div>
+
+<script>
+(function () {
+  var cues   = Array.prototype.slice.call(document.querySelectorAll('.cue'));
+  var clock  = document.getElementById('clock');
+  var pace   = document.getElementById('pace');
+  var toggle = document.getElementById('toggle');
+  var reset  = document.getElementById('reset');
+  var TOTAL  = 930; /* 15:00 */
+
+  var running = false, elapsed = 0, startedAt = 0, tick = null;
+
+  function mmss(s) {
+    s = Math.max(0, Math.round(s));
+    return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0');
+  }
+
+  function dueIndex(t) {
+    var idx = 0;
+    for (var n = 0; n < cues.length; n++) {
+      if (Number(cues[n].dataset.t) <= t) { idx = n; }
+    }
+    return idx;
+  }
+
+  function paint() {
+    var t = elapsed + (running ? (Date.now() - startedAt) / 1000 : 0);
+    clock.textContent = mmss(t);
+    clock.classList.toggle('over', t > TOTAL);
+
+    if (!running && t === 0) {
+      pace.textContent = 'Timer stopped';
+      cues.forEach(function (c) { c.classList.remove('due'); });
+      return;
+    }
+
+    var idx = dueIndex(t);
+    cues.forEach(function (c, n) { c.classList.toggle('due', n === idx); });
+    pace.innerHTML = 'You should be on <b>Slide ' + cues[idx].dataset.slide + '</b><br>of 20 &nbsp;·&nbsp; ' + mmss(TOTAL - t) + ' left';
+    if (t > TOTAL) {
+      pace.innerHTML = '<b>Over time</b><br>by ' + mmss(t - TOTAL);
+    }
+  }
+
+  function start() {
+    running = true;
+    startedAt = Date.now();
+    toggle.textContent = 'Pause';
+    tick = setInterval(paint, 250);
+    paint();
+  }
+  function pause() {
+    if (!running) return;
+    elapsed += (Date.now() - startedAt) / 1000;
+    running = false;
+    clearInterval(tick);
+    toggle.textContent = 'Resume';
+    paint();
+  }
+
+  toggle.addEventListener('click', function () { running ? pause() : start(); });
+  reset.addEventListener('click', function () {
+    if (running) { clearInterval(tick); running = false; }
+    elapsed = 0;
+    toggle.textContent = 'Start';
+    paint();
+  });
+
+  /* ---- reader-adjustable type size, remembered per browser ---- */
+  var size = 1;
+  try {
+    var saved = parseFloat(localStorage.getItem('violin-script-size'));
+    if (saved >= 0.8 && saved <= 1.8) { size = saved; }
+  } catch (e) { /* private mode, blocked storage — keep the default */ }
+
+  function applySize() {
+    document.documentElement.style.setProperty('--size', String(size));
+    try { localStorage.setItem('violin-script-size', String(size)); } catch (e) {}
+  }
+  applySize();
+
+  document.getElementById('bigger').addEventListener('click', function () {
+    size = Math.min(1.8, Math.round((size + 0.1) * 10) / 10); applySize();
+  });
+  document.getElementById('smaller').addEventListener('click', function () {
+    size = Math.max(0.8, Math.round((size - 0.1) * 10) / 10); applySize();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    if (/^(input|textarea|select)$/i.test(e.target.tagName)) return;
+    if (e.key === 's' || e.key === 'S') { running ? pause() : start(); e.preventDefault(); }
+  });
+
+  paint();
+})();
+</script>
