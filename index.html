@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="The violin appeared in northern Italy around 1530 essentially finished. A 15-minute talk on where it came from - and on the 19th-century rebuild that made it modern.">
-<meta name="color-scheme" content="dark">
-<meta name="theme-color" content="#14100D">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#FDFBF7">
 <meta property="og:type" content="website">
 <meta property="og:title" content="The Origin of the Modern Violin">
 <meta property="og:description" content="The violin appeared in northern Italy around 1530 essentially finished. A 15-minute talk on where it came from - and on the 19th-century rebuild that made it modern.">
@@ -19,21 +19,22 @@
    THE ORIGIN OF THE MODERN VIOLIN — presentation deck
    Ann Peterson · Sempre Music Club, Ogden, Utah · 2026
 
-   Deliberately single-theme: this is projected in a dimmed
-   room, so it must look identical regardless of the presenter's
-   OS theme. Every colour is painted explicitly.
+   Deliberately single-theme, and deliberately light: this is
+   projected in a daylit room, so it runs black-on-paper for
+   maximum contrast and looks identical regardless of the
+   presenter's OS theme. Every colour is painted explicitly.
    ============================================================ */
 
 :root{
-  --ground:    #14100D;  /* ebony — the dark inside an f-hole   */
-  --ground-2:  #1D1712;  /* raised panel                        */
-  --edge:      #34291E;  /* hairline rules                      */
-  --ink:       #F4EADA;  /* parchment                           */
-  --ink-2:     #C9B79E;  /* secondary text                      */
-  --dim:       #9C8A73;  /* warm neutral, biased to the accent  */
-  --varnish:   #E0993C;  /* Cremonese varnish — primary accent  */
-  --varnish-2: #B96C22;  /* deeper glaze                        */
-  --verdigris: #7FA89B;  /* the *other* family: viols, baroque  */
+  --ground:    #FDFBF7;  /* paper — a barely-warm white        */
+  --ground-2:  #F4EEE3;  /* raised panel                       */
+  --edge:      #D4C6AF;  /* hairline rules                     */
+  --ink:       #191410;  /* ebony — near-black, 17:1 on paper  */
+  --ink-2:     #40362B;  /* secondary text, 10:1               */
+  --dim:       #6B5D4C;  /* warm neutral labels, 5.9:1         */
+  --varnish:   #9C5A16;  /* Cremonese varnish — accent, 5.2:1  */
+  --varnish-2: #C07C28;  /* lighter glaze — rules and borders  */
+  --verdigris: #2C6A5D;  /* the *other* family: viols, baroque */
 
   --display: "Fraunces", Georgia, "Times New Roman", serif;
   --body:    "EB Garamond", Georgia, "Times New Roman", serif;
@@ -59,7 +60,7 @@ body{
   align-items: center;
   justify-content: center;
   background:
-    radial-gradient(120% 90% at 50% 0%, #1C1611 0%, var(--ground) 62%);
+    radial-gradient(120% 90% at 50% 0%, #FFFFFF 0%, var(--ground) 62%);
 }
 
 .stage{
@@ -368,7 +369,7 @@ em{ font-style: italic; }
   left: 0; right: 0;
   top: 3.4cqw;
   height: 2px;
-  background: linear-gradient(90deg, var(--edge), var(--varnish-2) 30%, var(--varnish) 78%, var(--varnish));
+  background: linear-gradient(90deg, #CDB08A, var(--varnish-2) 30%, var(--varnish) 78%, var(--varnish));
 }
 .tl{
   position: relative;
@@ -480,7 +481,7 @@ kbd{
 .outline{
   position: fixed;
   inset: 0;
-  background: rgba(15, 12, 9, .97);
+  background: var(--ground);
   z-index: 20;
   padding: 3.5vh 4vw;
   overflow-y: auto;
@@ -582,7 +583,7 @@ kbd{
         <div>
           <p class="minilabel" style="margin-bottom:.9cqw">The violin — abrupt, and essentially finished</p>
           <div class="chain">
-            <span class="pill" style="opacity:.4">?</span><span class="arrow">→</span>
+            <span class="pill" style="opacity:.55">?</span><span class="arrow">→</span>
             <span class="pill now">c. 1530 · the violin</span>
           </div>
         </div>
@@ -640,20 +641,20 @@ kbd{
         <svg viewBox="0 -36 1000 436" role="img" aria-label="Side-by-side comparison of a violin and a viola da gamba, showing that the violin has four strings in fifths, no frets, pointed corners and f-holes, while the viol has six strings in fourths, gut frets, sloped shoulders and C-holes.">
           <defs>
             <marker id="lead-w" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-              <circle cx="3" cy="3" r="2" fill="#5C4B39"/>
+              <circle cx="3" cy="3" r="2" fill="#7D6B53"/>
             </marker>
             <marker id="lead-g" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-              <circle cx="3" cy="3" r="2" fill="#4C5D57"/>
+              <circle cx="3" cy="3" r="2" fill="#4E7A6E"/>
             </marker>
           </defs>
 
           <!-- centre divider -->
-          <line x1="500" y1="60" x2="500" y2="400" stroke="#34291E" stroke-width="1"/>
+          <line x1="500" y1="60" x2="500" y2="400" stroke="#D4C6AF" stroke-width="1"/>
 
           <!-- ============ VIOLIN (centred at x = 300) ============ -->
-          <text x="300" y="-10" text-anchor="middle" fill="#E0993C" font-family="Archivo, sans-serif" font-size="21" font-weight="600" letter-spacing="2.4">VIOLIN</text>
+          <text x="300" y="-10" text-anchor="middle" fill="#9C5A16" font-family="Archivo, sans-serif" font-size="21" font-weight="600" letter-spacing="2.4">VIOLIN</text>
 
-          <g transform="translate(300 0)" stroke="#F4EADA" fill="none" stroke-width="2.4" stroke-linejoin="round">
+          <g transform="translate(300 0)" stroke="#191410" fill="none" stroke-width="2.4" stroke-linejoin="round">
             <!-- body: right half, mirrored -->
             <path id="vln-half" d="M 0,60
                      C 24,60 55,73 56,106
@@ -671,31 +672,31 @@ kbd{
           </g>
           <!-- violin strings + bridge + f-holes -->
           <g transform="translate(300 0)">
-            <g stroke="#C9B79E" stroke-width="1.2">
+            <g stroke="#40362B" stroke-width="1.2">
               <line x1="-6" y1="30" x2="-6" y2="270"/><line x1="-2" y1="30" x2="-2" y2="270"/>
               <line x1="2"  y1="30" x2="2"  y2="270"/><line x1="6"  y1="30" x2="6"  y2="270"/>
             </g>
-            <path d="M -22,184 L 22,184 L 16,168 L -16,168 Z" fill="#1D1712" stroke="#E0993C" stroke-width="2"/>
-            <g fill="none" stroke="#E0993C" stroke-width="3" stroke-linecap="round">
+            <path d="M -22,184 L 22,184 L 16,168 L -16,168 Z" fill="#F4EEE3" stroke="#9C5A16" stroke-width="2"/>
+            <g fill="none" stroke="#9C5A16" stroke-width="3" stroke-linecap="round">
               <path d="M 30,158 C 23,171 30,182 25,193 C 22,200 20,204 19,207"/>
               <path d="M -30,158 C -23,171 -30,182 -25,193 C -22,200 -20,204 -19,207"/>
               <line x1="19" y1="183" x2="32" y2="183"/><line x1="-19" y1="183" x2="-32" y2="183"/>
             </g>
-            <g fill="#E0993C">
+            <g fill="#9C5A16">
               <circle cx="31" cy="155" r="3.4"/><circle cx="18" cy="210" r="4"/>
               <circle cx="-31" cy="155" r="3.4"/><circle cx="-18" cy="210" r="4"/>
             </g>
           </g>
 
           <!-- violin callouts, left margin -->
-          <g font-family="Archivo, sans-serif" font-size="17" fill="#C9B79E" text-anchor="end">
-            <text x="196" y="52">4 strings, tuned in <tspan fill="#E0993C" font-weight="600">fifths</tspan></text>
+          <g font-family="Archivo, sans-serif" font-size="17" fill="#40362B" text-anchor="end">
+            <text x="196" y="52">4 strings, tuned in <tspan fill="#9C5A16" font-weight="600">fifths</tspan></text>
             <text x="196" y="126">no frets</text>
             <text x="196" y="196">pointed corners</text>
             <text x="196" y="266">f-holes</text>
-            <text x="196" y="336">held on the <tspan fill="#E0993C" font-weight="600">arm</tspan></text>
+            <text x="196" y="336">held on the <tspan fill="#9C5A16" font-weight="600">arm</tspan></text>
           </g>
-          <g stroke="#5C4B39" stroke-width="1.2" marker-end="url(#lead-w)">
+          <g stroke="#7D6B53" stroke-width="1.2" marker-end="url(#lead-w)">
             <line x1="204" y1="47"  x2="286" y2="34"/>
             <line x1="204" y1="121" x2="288" y2="44"/>
             <line x1="204" y1="191" x2="254" y2="157"/>
@@ -704,9 +705,9 @@ kbd{
           </g>
 
           <!-- ============ VIOL (centred at x = 700) ============ -->
-          <text x="700" y="-10" text-anchor="middle" fill="#7FA89B" font-family="Archivo, sans-serif" font-size="21" font-weight="600" letter-spacing="2.4">VIOLA DA GAMBA</text>
+          <text x="700" y="-10" text-anchor="middle" fill="#2C6A5D" font-family="Archivo, sans-serif" font-size="21" font-weight="600" letter-spacing="2.4">VIOLA DA GAMBA</text>
 
-          <g transform="translate(700 0)" stroke="#F4EADA" fill="none" stroke-width="2.4" stroke-linejoin="round">
+          <g transform="translate(700 0)" stroke="#191410" fill="none" stroke-width="2.4" stroke-linejoin="round">
             <path id="vol-half" d="M 0,56
                      C 17,58 45,76 51,112
                      C 55,134 49,148 45,160
@@ -719,35 +720,35 @@ kbd{
           </g>
           <g transform="translate(700 0)">
             <!-- six strings -->
-            <g stroke="#C9B79E" stroke-width="1.1">
+            <g stroke="#40362B" stroke-width="1.1">
               <line x1="-9" y1="26" x2="-9" y2="272"/><line x1="-5.4" y1="26" x2="-5.4" y2="272"/>
               <line x1="-1.8" y1="26" x2="-1.8" y2="272"/><line x1="1.8" y1="26" x2="1.8" y2="272"/>
               <line x1="5.4" y1="26" x2="5.4" y2="272"/><line x1="9" y1="26" x2="9" y2="272"/>
             </g>
             <!-- gut frets -->
-            <g stroke="#7FA89B" stroke-width="2.6" stroke-linecap="round">
+            <g stroke="#2C6A5D" stroke-width="2.6" stroke-linecap="round">
               <line x1="-12" y1="34" x2="12" y2="34"/><line x1="-12" y1="42" x2="12" y2="42"/>
               <line x1="-12" y1="50" x2="12" y2="50"/><line x1="-12" y1="58" x2="12" y2="58"/>
               <line x1="-12" y1="66" x2="12" y2="66"/><line x1="-12" y1="74" x2="12" y2="74"/>
               <line x1="-12" y1="82" x2="12" y2="82"/>
             </g>
-            <path d="M -24,188 L 24,188 L 18,172 L -18,172 Z" fill="#1D1712" stroke="#7FA89B" stroke-width="2"/>
+            <path d="M -24,188 L 24,188 L 18,172 L -18,172 Z" fill="#F4EEE3" stroke="#2C6A5D" stroke-width="2"/>
             <!-- C-holes -->
-            <g fill="none" stroke="#7FA89B" stroke-width="3.4" stroke-linecap="round">
+            <g fill="none" stroke="#2C6A5D" stroke-width="3.4" stroke-linecap="round">
               <path d="M 38,152 C 24,166 24,202 38,216"/>
               <path d="M -38,152 C -24,166 -24,202 -38,216"/>
             </g>
           </g>
 
           <!-- viol callouts, right margin -->
-          <g font-family="Archivo, sans-serif" font-size="17" fill="#C9B79E">
-            <text x="804" y="52">6 strings, tuned in <tspan fill="#7FA89B" font-weight="600">fourths</tspan></text>
+          <g font-family="Archivo, sans-serif" font-size="17" fill="#40362B">
+            <text x="804" y="52">6 strings, tuned in <tspan fill="#2C6A5D" font-weight="600">fourths</tspan></text>
             <text x="804" y="126">gut frets, tied on</text>
             <text x="804" y="196">sloped shoulders</text>
             <text x="804" y="266">C-holes</text>
-            <text x="804" y="336">held on the <tspan fill="#7FA89B" font-weight="600">leg</tspan></text>
+            <text x="804" y="336">held on the <tspan fill="#2C6A5D" font-weight="600">leg</tspan></text>
           </g>
-          <g stroke="#4C5D57" stroke-width="1.2" marker-end="url(#lead-g)">
+          <g stroke="#4E7A6E" stroke-width="1.2" marker-end="url(#lead-g)">
             <line x1="796" y1="47"  x2="714" y2="30"/>
             <line x1="796" y1="121" x2="716" y2="58"/>
             <line x1="796" y1="191" x2="748" y2="112"/>
@@ -883,78 +884,79 @@ kbd{
         <svg viewBox="0 0 1000 470" role="img" aria-label="Family and apprenticeship tree of Cremonese violin making: Andrea Amati to his sons Antonio and Girolamo, to Nicolo Amati; the plague of 1630 kills most of the city's luthiers, after which the workshop takes apprentices from outside the family for the first time — Andrea Guarneri, Francesco Rugeri, and Antonio Stradivari.">
           <defs>
             <marker id="tip-d" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto">
-              <polygon points="0,1 8,4.5 0,8" fill="#5C4B39"/>
+              <polygon points="0,1 8,4.5 0,8" fill="#7D6B53"/>
             </marker>
             <marker id="tip-a" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto">
-              <polygon points="0,1 8,4.5 0,8" fill="#E0993C"/>
+              <polygon points="0,1 8,4.5 0,8" fill="#9C5A16"/>
             </marker>
           </defs>
 
           <g font-family="Archivo, sans-serif">
             <!-- Andrea Amati -->
-            <rect x="392" y="14" width="216" height="52" rx="2" fill="#1D1712" stroke="#E0993C" stroke-width="2"/>
-            <text x="500" y="38" text-anchor="middle" fill="#F4EADA" font-size="19" font-weight="600">Andrea Amati</text>
-            <text x="500" y="56" text-anchor="middle" fill="#9C8A73" font-size="14">c. 1505–1577</text>
+            <rect x="392" y="14" width="216" height="52" rx="2" fill="#F4EEE3" stroke="#9C5A16" stroke-width="2"/>
+            <text x="500" y="38" text-anchor="middle" fill="#191410" font-size="19" font-weight="600">Andrea Amati</text>
+            <text x="500" y="56" text-anchor="middle" fill="#6B5D4C" font-size="14">c. 1505–1577</text>
 
             <!-- down to the two sons -->
-            <g stroke="#5C4B39" stroke-width="1.6" fill="none">
+            <g stroke="#7D6B53" stroke-width="1.6" fill="none">
               <path d="M 500,66 L 500,92 M 320,92 L 680,92 M 320,92 L 320,112 M 680,92 L 680,112"/>
             </g>
-            <text x="516" y="84" fill="#9C8A73" font-size="13">sons</text>
+            <text x="516" y="84" fill="#6B5D4C" font-size="13">sons</text>
 
-            <rect x="220" y="112" width="200" height="46" rx="2" fill="#1D1712" stroke="#5C4B39" stroke-width="1.6"/>
-            <text x="320" y="132" text-anchor="middle" fill="#C9B79E" font-size="17">Antonio Amati</text>
-            <text x="320" y="149" text-anchor="middle" fill="#9C8A73" font-size="13">1540–1607</text>
+            <rect x="220" y="112" width="200" height="46" rx="2" fill="#F4EEE3" stroke="#7D6B53" stroke-width="1.6"/>
+            <text x="320" y="132" text-anchor="middle" fill="#40362B" font-size="17">Antonio Amati</text>
+            <text x="320" y="149" text-anchor="middle" fill="#6B5D4C" font-size="13">1540–1607</text>
 
-            <rect x="580" y="112" width="200" height="46" rx="2" fill="#1D1712" stroke="#5C4B39" stroke-width="1.6"/>
-            <text x="680" y="132" text-anchor="middle" fill="#C9B79E" font-size="17">Girolamo Amati</text>
-            <text x="680" y="149" text-anchor="middle" fill="#9C8A73" font-size="13">1561–1630</text>
+            <rect x="580" y="112" width="200" height="46" rx="2" fill="#F4EEE3" stroke="#7D6B53" stroke-width="1.6"/>
+            <text x="680" y="132" text-anchor="middle" fill="#40362B" font-size="17">Girolamo Amati</text>
+            <text x="680" y="149" text-anchor="middle" fill="#6B5D4C" font-size="13">1561–1630</text>
 
             <!-- to Nicolo -->
-            <g stroke="#5C4B39" stroke-width="1.6" fill="none" marker-end="url(#tip-d)">
+            <g stroke="#7D6B53" stroke-width="1.6" fill="none" marker-end="url(#tip-d)">
               <path d="M 680,158 L 680,178 L 500,178 L 500,196"/>
             </g>
 
-            <rect x="386" y="198" width="228" height="52" rx="2" fill="#1D1712" stroke="#E0993C" stroke-width="2"/>
-            <text x="500" y="222" text-anchor="middle" fill="#F4EADA" font-size="19" font-weight="600">Nicolò Amati</text>
-            <text x="500" y="240" text-anchor="middle" fill="#9C8A73" font-size="14">1596–1684</text>
+            <rect x="386" y="198" width="228" height="52" rx="2" fill="#F4EEE3" stroke="#9C5A16" stroke-width="2"/>
+            <text x="500" y="222" text-anchor="middle" fill="#191410" font-size="19" font-weight="600">Nicolò Amati</text>
+            <text x="500" y="240" text-anchor="middle" fill="#6B5D4C" font-size="14">1596–1684</text>
 
             <!-- plague band -->
-            <rect x="40" y="266" width="920" height="62" rx="2" fill="#2A1810" stroke="#B96C22" stroke-width="1.6"/>
-            <text x="62" y="303" fill="#E0993C" font-size="16" font-weight="600" letter-spacing="1.6">1630 · PLAGUE</text>
-            <text x="222" fill="#C9B79E" font-size="15">
+            <rect x="40" y="266" width="920" height="62" rx="2" fill="#FBEFDD" stroke="#C07C28" stroke-width="1.6"/>
+            <text x="62" y="303" fill="#9C5A16" font-size="16" font-weight="600" letter-spacing="1.6">1630 · PLAGUE</text>
+            <text x="222" fill="#40362B" font-size="15">
               <tspan x="222" y="291">Most of Cremona&#8217;s luthiers die — including Girolamo, Nicolò&#8217;s father.</tspan>
               <tspan x="222" y="311">For the first time, the workshop must look outside the family.</tspan>
             </text>
 
             <!-- Nicolo down through the band -->
-            <line x1="500" y1="250" x2="500" y2="266" stroke="#5C4B39" stroke-width="1.6"/>
+            <line x1="500" y1="250" x2="500" y2="266" stroke="#7D6B53" stroke-width="1.6"/>
 
             <!-- apprentices -->
-            <g stroke="#E0993C" stroke-width="1.8" fill="none" marker-end="url(#tip-a)" stroke-dasharray="0">
+            <g stroke="#9C5A16" stroke-width="1.8" fill="none" marker-end="url(#tip-a)" stroke-dasharray="0">
               <path d="M 500,328 L 500,348 L 190,348 L 190,370"/>
               <path d="M 500,328 L 500,348 L 500,370"/>
             </g>
-            <g stroke="#E0993C" stroke-width="1.8" fill="none" marker-end="url(#tip-a)" stroke-dasharray="6 5">
+            <g stroke="#9C5A16" stroke-width="1.8" fill="none" marker-end="url(#tip-a)" stroke-dasharray="6 5">
               <path d="M 500,328 L 500,348 L 812,348 L 812,370"/>
             </g>
-            <text x="500" y="364" text-anchor="middle" fill="#E0993C" font-size="13" font-weight="600" letter-spacing="1.2">APPRENTICES, FROM OUTSIDE THE FAMILY</text>
+            <text x="500" y="364" text-anchor="middle" fill="#9C5A16" font-size="13" font-weight="600" letter-spacing="1.2"
+                  paint-order="stroke" stroke="#FDFBF7" stroke-width="6" stroke-linejoin="round">APPRENTICES, FROM OUTSIDE THE FAMILY</text>
 
-            <rect x="92" y="372" width="196" height="50" rx="2" fill="#1D1712" stroke="#5C4B39" stroke-width="1.6"/>
-            <text x="190" y="392" text-anchor="middle" fill="#C9B79E" font-size="17">Andrea Guarneri</text>
-            <text x="190" y="410" text-anchor="middle" fill="#9C8A73" font-size="13">1626–1698</text>
-            <text x="190" y="442" text-anchor="middle" fill="#9C8A73" font-size="14">grandfather of Giuseppe &#8220;del Gesù&#8221;</text>
-            <text x="190" y="460" text-anchor="middle" fill="#9C8A73" font-size="14">(1698–1744)</text>
+            <rect x="92" y="372" width="196" height="50" rx="2" fill="#F4EEE3" stroke="#7D6B53" stroke-width="1.6"/>
+            <text x="190" y="392" text-anchor="middle" fill="#40362B" font-size="17">Andrea Guarneri</text>
+            <text x="190" y="410" text-anchor="middle" fill="#6B5D4C" font-size="13">1626–1698</text>
+            <text x="190" y="442" text-anchor="middle" fill="#6B5D4C" font-size="14">grandfather of Giuseppe &#8220;del Gesù&#8221;</text>
+            <text x="190" y="460" text-anchor="middle" fill="#6B5D4C" font-size="14">(1698–1744)</text>
 
-            <rect x="402" y="372" width="196" height="50" rx="2" fill="#1D1712" stroke="#5C4B39" stroke-width="1.6"/>
-            <text x="500" y="392" text-anchor="middle" fill="#C9B79E" font-size="17">Francesco Rugeri</text>
-            <text x="500" y="410" text-anchor="middle" fill="#9C8A73" font-size="13">c. 1630–1698</text>
+            <rect x="402" y="372" width="196" height="50" rx="2" fill="#F4EEE3" stroke="#7D6B53" stroke-width="1.6"/>
+            <text x="500" y="392" text-anchor="middle" fill="#40362B" font-size="17">Francesco Rugeri</text>
+            <text x="500" y="410" text-anchor="middle" fill="#6B5D4C" font-size="13">c. 1630–1698</text>
 
-            <rect x="714" y="372" width="196" height="50" rx="2" fill="#1D1712" stroke="#E0993C" stroke-width="2"/>
-            <text x="812" y="392" text-anchor="middle" fill="#F4EADA" font-size="17" font-weight="600">Antonio Stradivari</text>
-            <text x="812" y="410" text-anchor="middle" fill="#9C8A73" font-size="13">c. 1644–1737</text>
-            <text x="812" y="442" text-anchor="middle" fill="#9C8A73" font-size="14">traditionally Nicolò&#8217;s pupil —</text>
-            <text x="812" y="460" text-anchor="middle" fill="#9C8A73" font-size="14">the link is still argued over</text>
+            <rect x="714" y="372" width="196" height="50" rx="2" fill="#F4EEE3" stroke="#9C5A16" stroke-width="2"/>
+            <text x="812" y="392" text-anchor="middle" fill="#191410" font-size="17" font-weight="600">Antonio Stradivari</text>
+            <text x="812" y="410" text-anchor="middle" fill="#6B5D4C" font-size="13">c. 1644–1737</text>
+            <text x="812" y="442" text-anchor="middle" fill="#6B5D4C" font-size="14">traditionally Nicolò&#8217;s pupil —</text>
+            <text x="812" y="460" text-anchor="middle" fill="#6B5D4C" font-size="14">the link is still argued over</text>
           </g>
         </svg>
         <figcaption>Solid arrows: documented descent and apprenticeship. Dashed: the traditional but disputed link. The plague is what opened the door.</figcaption>
@@ -1011,93 +1013,93 @@ kbd{
         <svg viewBox="0 0 1000 470" role="img" aria-label="Schematic side view comparing a baroque violin setup of about 1710 with its modern conversion of about 1820. The baroque neck lies nearly parallel to the belly with a wedge under a short fingerboard, a low bridge, and a light bass bar, and is nailed to the top block. The modern neck is longer and tilted back, mortised into the block, with a long ebony fingerboard, a higher bridge and a longer, heavier bass bar.">
           <defs>
             <marker id="tip2-g" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-              <polygon points="0,1 7,4 0,7" fill="#4C5D57"/>
+              <polygon points="0,1 7,4 0,7" fill="#4E7A6E"/>
             </marker>
             <marker id="tip2-d" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-              <polygon points="0,1 7,4 0,7" fill="#5C4B39"/>
+              <polygon points="0,1 7,4 0,7" fill="#7D6B53"/>
             </marker>
           </defs>
 
           <!-- ============ BAROQUE, belly line y = 150 ============ -->
-          <text x="40" y="34" fill="#7FA89B" font-family="Archivo, sans-serif" font-size="18" font-weight="600" letter-spacing="1.8">AS STRADIVARI MADE IT · c. 1710</text>
+          <text x="40" y="34" fill="#2C6A5D" font-family="Archivo, sans-serif" font-size="18" font-weight="600" letter-spacing="1.8">AS STRADIVARI MADE IT · c. 1710</text>
 
           <!-- callout row, above -->
-          <g font-family="Archivo, sans-serif" font-size="15" fill="#9C8A73" text-anchor="middle">
+          <g font-family="Archivo, sans-serif" font-size="15" fill="#6B5D4C" text-anchor="middle">
             <text x="350" y="72">neck nearly parallel</text>
             <text x="556" y="72">nailed to the block</text>
             <text x="700" y="72">light bass bar</text>
             <text x="838" y="72">low bridge</text>
           </g>
-          <g stroke="#4C5D57" stroke-width="1.1" fill="none" marker-end="url(#tip2-g)">
+          <g stroke="#4E7A6E" stroke-width="1.1" fill="none" marker-end="url(#tip2-g)">
             <line x1="350" y1="80" x2="350" y2="130"/>
             <line x1="556" y1="80" x2="530" y2="140"/>
             <line x1="700" y1="80" x2="700" y2="150"/>
             <line x1="838" y1="80" x2="770" y2="110"/>
           </g>
 
-          <g stroke="#F4EADA" fill="none" stroke-width="2.2" stroke-linejoin="round">
+          <g stroke="#191410" fill="none" stroke-width="2.2" stroke-linejoin="round">
             <!-- body -->
             <path d="M 520,150 Q 710,142 900,150"/>
             <path d="M 520,206 Q 710,214 900,206"/>
             <path d="M 520,150 L 520,206 M 900,150 L 900,206"/>
           </g>
           <!-- top block -->
-          <rect x="521" y="151" width="40" height="54" fill="#2A2119" stroke="none"/>
+          <rect x="521" y="151" width="40" height="54" fill="#EBE2D1" stroke="none"/>
           <!-- neck (butts against the block, nailed) -->
-          <path d="M 300,148 L 520,148 L 520,174 L 300,174 Z" fill="#241C15" stroke="#F4EADA" stroke-width="2.2"/>
+          <path d="M 300,148 L 520,148 L 520,174 L 300,174 Z" fill="#EFE7D8" stroke="#191410" stroke-width="2.2"/>
           <!-- wedge under the fingerboard -->
-          <path d="M 300,139 L 520,134 L 520,148 L 300,148 Z" fill="#3A2C1E" stroke="#7FA89B" stroke-width="1.6"/>
+          <path d="M 300,139 L 520,134 L 520,148 L 300,148 Z" fill="#DCCDB2" stroke="#2C6A5D" stroke-width="1.6"/>
           <!-- short fingerboard -->
-          <path d="M 300,130 L 555,124 L 555,133 L 300,139 Z" fill="#0E0B08" stroke="#F4EADA" stroke-width="1.8"/>
+          <path d="M 300,130 L 555,124 L 555,133 L 300,139 Z" fill="#2E2720" stroke="#191410" stroke-width="1.8"/>
           <!-- nails -->
-          <g stroke="#7FA89B" stroke-width="2" stroke-linecap="round">
+          <g stroke="#2C6A5D" stroke-width="2" stroke-linecap="round">
             <line x1="524" y1="156" x2="536" y2="156"/>
             <line x1="524" y1="164" x2="536" y2="164"/>
             <line x1="524" y1="172" x2="536" y2="172"/>
           </g>
           <!-- bass bar (dashed, inside) -->
-          <line x1="612" y1="158" x2="828" y2="158" stroke="#7FA89B" stroke-width="3" stroke-dasharray="7 5"/>
+          <line x1="612" y1="158" x2="828" y2="158" stroke="#2C6A5D" stroke-width="3" stroke-dasharray="7 5"/>
           <!-- bridge -->
-          <path d="M 742,148 L 758,148 L 754,114 L 746,114 Z" fill="#1D1712" stroke="#F4EADA" stroke-width="1.8"/>
+          <path d="M 742,148 L 758,148 L 754,114 L 746,114 Z" fill="#F4EEE3" stroke="#191410" stroke-width="1.8"/>
           <!-- strings -->
-          <line x1="300" y1="126" x2="750" y2="114" stroke="#C9B79E" stroke-width="1.4"/>
-          <line x1="750" y1="114" x2="884" y2="146" stroke="#C9B79E" stroke-width="1.4"/>
+          <line x1="300" y1="126" x2="750" y2="114" stroke="#40362B" stroke-width="1.4"/>
+          <line x1="750" y1="114" x2="884" y2="146" stroke="#40362B" stroke-width="1.4"/>
           <!-- projection dimension -->
-          <line x1="750" y1="114" x2="750" y2="146" stroke="#7FA89B" stroke-width="1" stroke-dasharray="3 3"/>
+          <line x1="750" y1="114" x2="750" y2="146" stroke="#2C6A5D" stroke-width="1" stroke-dasharray="3 3"/>
 
           <!-- ============ MODERN, belly line y = 330 ============ -->
-          <text x="40" y="266" fill="#E0993C" font-family="Archivo, sans-serif" font-size="18" font-weight="600" letter-spacing="1.8">AS CONVERTED · c. 1820, AND AS PLAYED TODAY</text>
+          <text x="40" y="266" fill="#9C5A16" font-family="Archivo, sans-serif" font-size="18" font-weight="600" letter-spacing="1.8">AS CONVERTED · c. 1820, AND AS PLAYED TODAY</text>
 
-          <g stroke="#F4EADA" fill="none" stroke-width="2.2" stroke-linejoin="round">
+          <g stroke="#191410" fill="none" stroke-width="2.2" stroke-linejoin="round">
             <path d="M 520,330 Q 710,322 900,330"/>
             <path d="M 520,386 Q 710,394 900,386"/>
             <path d="M 520,330 L 520,386 M 900,330 L 900,386"/>
           </g>
-          <rect x="521" y="331" width="40" height="54" fill="#2A2119" stroke="none"/>
+          <rect x="521" y="331" width="40" height="54" fill="#EBE2D1" stroke="none"/>
           <!-- neck: longer, tilted back, and running INTO the block -->
-          <path d="M 286,329 L 556,313 L 556,339 L 286,355 Z" fill="#241C15" stroke="#F4EADA" stroke-width="2.2"/>
+          <path d="M 286,329 L 556,313 L 556,339 L 286,355 Z" fill="#EFE7D8" stroke="#191410" stroke-width="2.2"/>
           <!-- mortise outline -->
-          <path d="M 520,315 L 556,313 L 556,339 L 520,341" fill="none" stroke="#E0993C" stroke-width="2" stroke-dasharray="5 4"/>
+          <path d="M 520,315 L 556,313 L 556,339 L 520,341" fill="none" stroke="#9C5A16" stroke-width="2" stroke-dasharray="5 4"/>
           <!-- long ebony fingerboard, no wedge -->
-          <path d="M 286,320 L 625,296 L 625,305 L 286,329 Z" fill="#0E0B08" stroke="#F4EADA" stroke-width="1.8"/>
+          <path d="M 286,320 L 625,296 L 625,305 L 286,329 Z" fill="#2E2720" stroke="#191410" stroke-width="1.8"/>
           <!-- heavier, longer bass bar -->
-          <line x1="560" y1="340" x2="872" y2="340" stroke="#E0993C" stroke-width="6" stroke-dasharray="9 5"/>
+          <line x1="560" y1="340" x2="872" y2="340" stroke="#9C5A16" stroke-width="6" stroke-dasharray="9 5"/>
           <!-- taller bridge -->
-          <path d="M 741,328 L 759,328 L 755,282 L 745,282 Z" fill="#1D1712" stroke="#F4EADA" stroke-width="1.8"/>
-          <line x1="286" y1="316" x2="750" y2="282" stroke="#C9B79E" stroke-width="1.4"/>
-          <line x1="750" y1="282" x2="884" y2="326" stroke="#C9B79E" stroke-width="1.4"/>
-          <line x1="750" y1="282" x2="750" y2="326" stroke="#E0993C" stroke-width="1" stroke-dasharray="3 3"/>
+          <path d="M 741,328 L 759,328 L 755,282 L 745,282 Z" fill="#F4EEE3" stroke="#191410" stroke-width="1.8"/>
+          <line x1="286" y1="316" x2="750" y2="282" stroke="#40362B" stroke-width="1.4"/>
+          <line x1="750" y1="282" x2="884" y2="326" stroke="#40362B" stroke-width="1.4"/>
+          <line x1="750" y1="282" x2="750" y2="326" stroke="#9C5A16" stroke-width="1" stroke-dasharray="3 3"/>
 
           <!-- callout row, below -->
-          <g stroke="#5C4B39" stroke-width="1.1" fill="none" marker-end="url(#tip2-d)">
+          <g stroke="#7D6B53" stroke-width="1.1" fill="none" marker-end="url(#tip2-d)">
             <line x1="330" y1="420" x2="345" y2="352"/>
             <line x1="530" y1="420" x2="540" y2="348"/>
             <line x1="720" y1="420" x2="700" y2="348"/>
             <line x1="880" y1="420" x2="775" y2="300"/>
           </g>
-          <g font-family="Archivo, sans-serif" font-size="15" fill="#C9B79E" text-anchor="middle">
-            <text x="330" y="438">longer neck, <tspan fill="#E0993C" font-weight="600">tilted back</tspan></text>
-            <text x="530" y="438"><tspan fill="#E0993C" font-weight="600">mortised</tspan> into the block</text>
+          <g font-family="Archivo, sans-serif" font-size="15" fill="#40362B" text-anchor="middle">
+            <text x="330" y="438">longer neck, <tspan fill="#9C5A16" font-weight="600">tilted back</tspan></text>
+            <text x="530" y="438"><tspan fill="#9C5A16" font-weight="600">mortised</tspan> into the block</text>
             <text x="720" y="438">longer, heavier bass bar</text>
             <text x="880" y="438">higher bridge</text>
           </g>
@@ -1114,20 +1116,20 @@ kbd{
         <figure class="fig">
           <svg viewBox="0 0 620 250" role="img" aria-label="Comparison of two bows. The baroque bow is shorter with a stick curving away from the hair; the Tourte bow of about 1785 is longer with a stick cambered inward toward the hair.">
             <!-- baroque bow -->
-            <text x="14" y="30" fill="#7FA89B" font-family="Archivo, sans-serif" font-size="14" font-weight="600" letter-spacing="1.4">BAROQUE · 62–70 cm</text>
-            <line x1="60" y1="76" x2="470" y2="76" stroke="#C9B79E" stroke-width="2.4"/>
-            <path d="M 60,72 Q 265,42 470,70" fill="none" stroke="#F4EADA" stroke-width="3.4" stroke-linecap="round"/>
-            <path d="M 46,64 L 62,64 L 62,84 L 46,80 Z" fill="#241C15" stroke="#F4EADA" stroke-width="2"/>
-            <path d="M 470,70 L 480,76 L 470,80 Z" fill="#F4EADA"/>
-            <text x="265" y="104" text-anchor="middle" fill="#7FA89B" font-family="Archivo, sans-serif" font-size="14">stick curves <tspan font-weight="600">away from</tspan> the hair</text>
+            <text x="14" y="30" fill="#2C6A5D" font-family="Archivo, sans-serif" font-size="14" font-weight="600" letter-spacing="1.4">BAROQUE · 62–70 cm</text>
+            <line x1="60" y1="76" x2="470" y2="76" stroke="#40362B" stroke-width="2.4"/>
+            <path d="M 60,72 Q 265,42 470,70" fill="none" stroke="#191410" stroke-width="3.4" stroke-linecap="round"/>
+            <path d="M 46,64 L 62,64 L 62,84 L 46,80 Z" fill="#EFE7D8" stroke="#191410" stroke-width="2"/>
+            <path d="M 470,70 L 480,76 L 470,80 Z" fill="#191410"/>
+            <text x="265" y="104" text-anchor="middle" fill="#2C6A5D" font-family="Archivo, sans-serif" font-size="14">stick curves <tspan font-weight="600">away from</tspan> the hair</text>
 
             <!-- modern bow -->
-            <text x="14" y="164" fill="#E0993C" font-family="Archivo, sans-serif" font-size="14" font-weight="600" letter-spacing="1.4">TOURTE · 74–75 cm</text>
-            <line x1="60" y1="206" x2="560" y2="206" stroke="#C9B79E" stroke-width="2.4"/>
-            <path d="M 62,184 Q 310,214 558,184" fill="none" stroke="#E0993C" stroke-width="3.8" stroke-linecap="round"/>
-            <path d="M 42,180 L 62,180 L 62,214 L 42,210 Z" fill="#241C15" stroke="#E0993C" stroke-width="2"/>
-            <path d="M 556,183 L 574,206 L 556,212 Z" fill="#E0993C"/>
-            <text x="310" y="244" text-anchor="middle" fill="#E0993C" font-family="Archivo, sans-serif" font-size="14">cambered <tspan font-weight="600">inward</tspan>, toward the hair</text>
+            <text x="14" y="164" fill="#9C5A16" font-family="Archivo, sans-serif" font-size="14" font-weight="600" letter-spacing="1.4">TOURTE · 74–75 cm</text>
+            <line x1="60" y1="206" x2="560" y2="206" stroke="#40362B" stroke-width="2.4"/>
+            <path d="M 62,184 Q 310,214 558,184" fill="none" stroke="#9C5A16" stroke-width="3.8" stroke-linecap="round"/>
+            <path d="M 42,180 L 62,180 L 62,214 L 42,210 Z" fill="#EFE7D8" stroke="#9C5A16" stroke-width="2"/>
+            <path d="M 556,183 L 574,206 L 556,212 Z" fill="#9C5A16"/>
+            <text x="310" y="244" text-anchor="middle" fill="#9C5A16" font-family="Archivo, sans-serif" font-size="14">cambered <tspan font-weight="600">inward</tspan>, toward the hair</text>
           </svg>
           <figcaption>Pernambuco wood, and a frog that spreads the hair into a flat ribbon.</figcaption>
         </figure>
