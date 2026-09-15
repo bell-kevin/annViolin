@@ -47,8 +47,9 @@ Open `violin-script.html` and press <kbd>S</kbd> (or click **Start**) to run the
 highlights the section you should be reading at that moment and shows how much time is left, so
 you can tell at a glance whether you are drifting.
 
-- **2,109 spoken words**, about 14:30–15:05 depending on pace.
+- **About 2,100 spoken words**, about 14:30–15:05 depending on pace.
 - Times in the left rail are **cumulative** — where to be when you *start* that slide.
+- Slide 7 cues Ann to point to the violin in the enlarged painting detail and pause briefly.
 - Slides 11 (Brescia) and 18 (the timeline) are marked **cut if long**; dropping both saves
   roughly 70 seconds.
 - <kbd>A+</kbd> / <kbd>A−</kbd> adjust the type size, remembered per browser.
@@ -88,9 +89,22 @@ Two claims are deliberately presented as unsettled rather than as the traditiona
   Paris follow-up study (2014)
 - The Ashmolean Museum, Oxford; the National Music Museum, Vermillion, South Dakota
 
+## Artwork
+
+Slide 7 includes Gaudenzio Ferrari's *Madonna of the Orange Tree* (1529–30), in San Cristoforo,
+Vercelli, alongside an enlarged detail of the musician angels so the violin is easy to see.
+Both JPEGs are embedded in `index.html`, so the slideshow remains a single file that works offline.
+
+Public-domain reproductions from Wikimedia Commons:
+
+- [Full painting](https://commons.wikimedia.org/wiki/File:La_Madonna_degli_aranci.jpg)
+  — 1,234 × 2,216 pixels; public domain (PD-old-100).
+- [Musician-angel detail](https://commons.wikimedia.org/wiki/File:La_Madonna_degli_aranci_-_Putti.jpg)
+  — 1,235 × 686 pixels; public domain (PD-Art / PD-old-100). The source page credits
+  Renato Meucci, *Un corpo alla ricerca dell'anima…*, Saggi–Essays, Cremona, 2005, p. 68.
+
 ## Known gaps
 
-The slides contain **no photographs** — they are typographic plus hand-drawn diagrams. The talk
-names specific artworks that would be worth putting on screen if licensed copies are available:
-Gaudenzio Ferrari's 1535 Saronno cupola, an Andrea Amati from the Charles IX set, and a Stradivari
-label. Slides 7, 10 and 14 are the natural homes for those.
+Other artworks named in the talk could still be added: Ferrari's 1535 Saronno cupola, an Andrea
+Amati from the Charles IX set, and a Stradivari label. Slides 7, 10 and 14 are the natural homes
+for those.

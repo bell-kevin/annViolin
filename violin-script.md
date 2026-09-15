@@ -77,11 +77,13 @@ First, the **word**. Variants of *violino* start turning up in account books and
 
 Second, the **pictures** — and these are wonderful.
 
-There is a painter named **Gaudenzio Ferrari**, working in Piedmont and Lombardy. Around 1529 he paints a Madonna in Vercelli, and one of the angels is holding what is unmistakably a violin. Three strings rather than four — but the body, the f-holes, the scroll, the whole gesture of it, all there.
+The full painting on the left is **Gaudenzio Ferrari's** *Madonna of the Orange Tree*, painted around **1529** in **Vercelli**. Now look at the enlarged detail in the center. The angel on the left holds a violin. Three strings rather than four — but the curved waist, the f-holes, the scroll: **unmistakable**. These are the features we still recognize on a violin today.
 
-Then in **1535** he paints the dome of the sanctuary at Saronno: a ceiling crowded with musical angels. And among them is not one violin but the **whole family** — violin, viola, and a big bass.
+*(Point to the violin in the enlarged detail. Pause a beat.)*
 
-That is the detail that should stop us. Six years after the first glimpse of the idea, a painter is depicting it as a complete, settled, four-part consort. This thing developed fast.
+Then in **1535** Ferrari paints the dome of the sanctuary at Saronno: a ceiling crowded with musical angels. Among them is the **whole family** — violin, viola, and a big bass.
+
+Six years after this glimpse in Vercelli, a painter is depicting a complete, settled, four-part consort. **This thing developed fast.**
 
 ## [SLIDE 8 — "Used for dancing"] · 6:05
 
